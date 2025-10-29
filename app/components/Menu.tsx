@@ -45,13 +45,13 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <section id="menu" className='min-h-screen w-full bg-[#E7E1DA] flex flex-col items-center py-20 px-4'>
-      <div className='flex flex-col gap-8'>
-        <h1 className="font-bebas text-5xl md:text-7xl text-center text-[#DA714E] mb-4 tracking-wide">Our Menu</h1>
-        <p className='text-black/40 text-2xl'>All tacos made with handmade tortillas</p>
+    <section id="menu" className='min-h-screen w-full bg-[#E7E1DA] flex flex-col items-center py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8'>
+      <div className='flex flex-col gap-4 md:gap-6 lg:gap-8'>
+        <h1 className="font-bebas text-5xl md:text-7xl text-center text-[#DA714E] mb-2 md:mb-4 tracking-wide">Our Menu</h1>
+        <p className='text-black/40 text-lg md:text-xl lg:text-2xl text-center'>All tacos made with handmade tortillas</p>
       </div>
-      
-      <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-4/5 mt-10'>
+
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 w-full max-w-7xl mt-8 md:mt-10 lg:mt-12'>
         {menuItems.map((item, i) => (
           <Card key={i} menuItem={item.name} description={item.description} price={item.price}/>
         ))}
